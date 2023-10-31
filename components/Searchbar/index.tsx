@@ -1,7 +1,7 @@
 import React, { useState, useEffect, FC } from "react";
 import axios from "axios";
 import { useShowContext } from "../../contexts";
-import Spinner from "./Spinner"; // Replace with the actual path to your spinner component
+import Spinner from "./Spinner";
 
 interface SearchBarProps {
   setShowData: React.Dispatch<React.SetStateAction<{}>>;
@@ -19,7 +19,7 @@ const SearchBar: FC<SearchBarProps> = ({
 
   const findShows = async () => {
     setError(null);
-    setIsShowDataLoading(true); // Start loading
+    setIsShowDataLoading(true);
     try {
       const res = await axios(`/api/findShows?query=${query}`);
       if (res) {
@@ -29,7 +29,7 @@ const SearchBar: FC<SearchBarProps> = ({
       setError("An error occurred while fetching shows.");
       console.error("An error occurred while fetching shows:", error);
     } finally {
-      setIsShowDataLoading(false); // Stop loading regardless of success or error
+      setIsShowDataLoading(false);
     }
   };
 
@@ -40,15 +40,7 @@ const SearchBar: FC<SearchBarProps> = ({
   };
 
   useEffect(() => {
-    // const timerId = setTimeout(() => {
-    //   if (query.length > 0) {
     findShows();
-    //   }
-    // }, 1000);
-
-    // return () => {
-    //   clearTimeout(timerId);
-    // };
   }, [query]);
 
   return (
@@ -80,7 +72,7 @@ const SearchBar: FC<SearchBarProps> = ({
         />
         {isShowDataLoading && (
           <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
-            <Spinner /> {/* Your imported spinner component */}
+            <Spinner />
           </div>
         )}
       </div>

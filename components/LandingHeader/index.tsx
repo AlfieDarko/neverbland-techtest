@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useShowContext } from "../../contexts";
 import { motion, useAnimation } from "framer-motion";
 import { StyledBG } from "./styled";
-import { IShowBackgroundImage } from "../../types"; // Importing the existing type
+import { IShowBackgroundImage } from "../../types";
 import styled from "styled-components";
 
 interface LandingHeaderProps {

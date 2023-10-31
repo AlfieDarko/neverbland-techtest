@@ -36,7 +36,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, show, closeModal }) => {
               width: "90%",
               borderRadius: "4px",
               padding: "20px",
-              overflow: "hidden", // To ensure that the motion.div doesn't exceed this container
+              overflow: "hidden",
               overflowY: "scroll",
             },
           }}
@@ -51,7 +51,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, show, closeModal }) => {
           >
             <TVShowDetailsHeader showData={show} />
             <TVShowDetailsData showData={show} />
-            {/* {children} */}
           </motion.div>
         </ReactModal>
       )}

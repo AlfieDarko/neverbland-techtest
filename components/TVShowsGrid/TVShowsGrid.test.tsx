@@ -4,7 +4,6 @@ import TVShowsGrid from "./";
 import { useShowContext } from "../../contexts";
 import axios from "axios";
 
-// Mock axios and useShowContext
 jest.mock("axios", () => ({
   get: jest.fn(),
 }));
@@ -14,7 +13,6 @@ jest.mock("../../contexts", () => ({
 
 const mockSetShowBackground = jest.fn();
 
-// Set up and return mock values for the context
 useShowContext.mockImplementation(() => [
   [
     {
@@ -34,11 +32,11 @@ useShowContext.mockImplementation(() => [
       },
     },
   ],
-  jest.fn(), // mock for replaceState
-  jest.fn(), // mock for addShow
-  jest.fn(), // mock for removeShow
-  [], // mock for showBackgrounds
-  mockSetShowBackground, // mock for setShowBackground
+  jest.fn(),
+  jest.fn(),
+  jest.fn(),
+  [],
+  mockSetShowBackground,
 ]);
 
 describe("TVShowsGrid", () => {

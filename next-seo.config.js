@@ -7,7 +7,7 @@ const SEO = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "mridul.tech",
+    url: "techflix.vercel.app",
     site_name: "Next Template",
     // images: [
     //     {

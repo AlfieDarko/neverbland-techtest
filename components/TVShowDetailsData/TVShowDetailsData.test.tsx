@@ -4,7 +4,6 @@ import TVShowDetailsData from "./";
 import React from "react";
 import { IShowInfo } from "../../types";
 
-// Mock the axios module
 jest.mock("axios");
 
 const mockShowData: Partial<IShowInfo> = {
@@ -17,7 +16,6 @@ const mockShowData: Partial<IShowInfo> = {
   },
 };
 
-// Mock response for cast data
 const mockCastData = [
   {
     person: {

@@ -13,8 +13,6 @@ interface TVShowDetailsHeaderProps {
 const TVShowDetailsHeader: React.FC<TVShowDetailsHeaderProps> = ({
   showData,
 }) => {
-  // descructure showData to get show if showdata exists
-
   const { show } = showData || {};
   const sanitizedShowSummary = show?.summary
     ? DOMPurify.sanitize(show.summary)

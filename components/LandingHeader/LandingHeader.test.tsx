@@ -1,12 +1,8 @@
 import React from "react";
-import { render, RenderResult, screen } from "@testing-library/react";
-import { useShowContext } from "../../contexts"; // Path might differ
-import { motion, useAnimation } from "framer-motion"; // You'll mock this too
+import { render, screen } from "@testing-library/react";
 
-import LandingHeader from "."; // Path might differ
-// Mocking the necessary hooks and components
-// Mocking the necessary hooks and components
-// Mocking the framer-motion components
+import LandingHeader from ".";
+
 jest.mock("framer-motion", () => ({
   motion: {
     div: jest.fn((props) => <div {...props} />),
@@ -14,9 +10,9 @@ jest.mock("framer-motion", () => ({
   },
   useAnimation: () => ({
     set: jest.fn(),
-    start: jest.fn().mockResolvedValue(null), // simplifying the promise mock
+    start: jest.fn().mockResolvedValue(null),
     stop: jest.fn(),
-    subscribe: jest.fn(() => ({ unsubscribe: jest.fn() })), // Add mock subscribe function
+    subscribe: jest.fn(() => ({ unsubscribe: jest.fn() })),
   }),
 }));
 
@@ -43,6 +39,4 @@ describe("LandingHeader", () => {
     });
     expect(backgroundImage).toBeInTheDocument();
   });
-
-  // Additional tests can go here...
 });

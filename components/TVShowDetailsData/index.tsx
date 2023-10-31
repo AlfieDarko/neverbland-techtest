@@ -19,7 +19,6 @@ const TVShowDetailsData: React.FC<TVShowDetailsDataProps> = ({ showData }) => {
     };
     getCast();
 
-    // Cleanup function
     return () => {
       setCast(null);
     };
@@ -28,13 +27,11 @@ const TVShowDetailsData: React.FC<TVShowDetailsDataProps> = ({ showData }) => {
   return (
     <div className="mt-[100px] mr-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* Column 1 */}
         <div className="flex flex-col md:mb-0 mb-10">
           <p className="text-black text-3xl not-italic font-light leading-[35px] tracking-[0.5px] mb-[68px]">
             Show Info
           </p>
           <div className="grid grid-cols-2 md:grid-cols-1 gap-4 ">
-            {/* Add your Show Info details here */}
             <div
               data-testid="network-name"
               className="h-20 relative flex-col md:flex-row justify-start md:items-center inline-flex md:border-b-2"

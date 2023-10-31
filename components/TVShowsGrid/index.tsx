@@ -4,7 +4,7 @@ import { useShowContext } from "../../contexts";
 import { motion } from "framer-motion";
 import Modal from "../Modal";
 import axios from "axios";
-import { IShowInfo } from "../../types"; // Assuming you have this type in your types folder
+import { IShowInfo } from "../../types";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -53,7 +53,6 @@ const TVShowsGrid: React.FC = () => {
     const element = e.currentTarget;
     const id = element.getAttribute("data-id");
 
-    // Set a timeout to change the background after 1 second
     const timer = setTimeout(async () => {
       const response = await axios.get(`/api/findBackgroundImage?query=${id}`);
       const backgroundImages = response.data;
@@ -96,7 +95,7 @@ const TVShowsGrid: React.FC = () => {
               setShowModal(true);
               setShowId(item.show.id);
             }}
-            onMouseOver={handleMouseOver} // <-- New line here
+            onMouseOver={handleMouseOver}
           >
             <TVShowsGridItem
               item={fadeInAnimationVariants}

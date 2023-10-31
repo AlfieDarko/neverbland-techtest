@@ -22,7 +22,7 @@ const TVShowsGridItem: FC<TVShowsGridItemProps> = ({
     >
       <div className="mb-[10px]">
         <motion.img
-          src={image || "/images/no_movie_cover.png"} // Fallback to default image if none provided
+          src={image || "/images/no_movie_cover.png"}
           className="w-full lg:w-[165px] lg:h-[240px]"
           alt={title}
           whileHover={{

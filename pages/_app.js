@@ -1,4 +1,3 @@
-// SEO
 import "../src/styles/globals.scss";
 import { ShowProvider } from "../contexts";
 import { DefaultSeo } from "next-seo";

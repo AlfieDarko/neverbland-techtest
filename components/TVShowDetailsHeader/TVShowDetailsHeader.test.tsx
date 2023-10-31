@@ -3,7 +3,6 @@ import TVShowDetailsHeader from "./";
 import React from "react";
 import { IShowInfo } from "../../types";
 
-// Mocking the StarRatings component
 jest.mock("../Ratings/StarRatings", () => {
   return {
     __esModule: true,
@@ -49,7 +48,7 @@ describe("TVShowDetailsHeader", () => {
 
   it("sanitizes and renders the show's summary", () => {
     render(<TVShowDetailsHeader showData={mockShowData} />);
-    // Assuming the summary would be sanitized to plain text
+
     expect(screen.getByText("Some show summary")).toBeInTheDocument();
   });
 });

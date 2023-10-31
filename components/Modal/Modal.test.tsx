@@ -2,7 +2,7 @@ import React from "react";
 import { render, fireEvent, waitFor, screen } from "@testing-library/react";
 import Modal from ".";
 import { mockShowInfo as mockShow } from "./mockData";
-// Mock the child components that make network requests
+
 jest.mock("../TVShowDetailsHeader", () => (props) => (
   <div data-testid="tvshow-details-header-mock">
     TV Show Details Header Content
@@ -32,7 +32,6 @@ describe("Modal from a User's Perspective", () => {
   });
 
   it("closes modal on exit", async () => {
-    // const closeModalMock = jest.fn();
     let isOpen = true;
     const closeModalMock = jest.fn(() => {
       isOpen = false;
@@ -42,7 +41,6 @@ describe("Modal from a User's Perspective", () => {
       <Modal isOpen={isOpen} show={mockShow} closeModal={closeModalMock} />
     );
 
-    // isOpen = false;
     const modal = screen.getByRole("dialog");
     fireEvent.keyDown(modal, { key: "Escape", code: "Escape" });
 
@@ -50,7 +48,6 @@ describe("Modal from a User's Perspective", () => {
       <Modal isOpen={isOpen} show={mockShow} closeModal={closeModalMock} />
     );
 
-    // const modal = screen.getByRole("dialog");
     await waitFor(() => expect(isOpen).toBe(false), { timeout: 1000 });
     await waitFor(() => expect(closeModalMock).toHaveBeenCalled(), {
       timeout: 1000,
