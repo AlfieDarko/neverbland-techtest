@@ -1,6 +1,6 @@
-import "../src/styles/globals.scss";
-
 // SEO
+import "../src/styles/globals.scss";
+import { ShowProvider } from "../contexts";
 import { DefaultSeo } from "next-seo";
 import SEO from "../next-seo.config";
 
@@ -8,7 +8,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <DefaultSeo {...SEO} />
-      <Component {...pageProps} />
+      <ShowProvider>
+        <Component {...pageProps} />
+      </ShowProvider>
     </>
   );
 }
