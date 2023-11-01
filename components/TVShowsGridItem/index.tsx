@@ -27,7 +27,7 @@ const TVShowsGridItem: FC<TVShowsGridItemProps> = ({ title, image, score }) => {
         />
       </div>
       <div className="mb-[10px] hidden md:block">
-        <StarRatings score={score} />
+        <StarRatings score={score} isBgDark />
       </div>
       <p className="text-gray-200 text-xl not-italic font-light leading-5">
         {title}

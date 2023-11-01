@@ -4,7 +4,7 @@ import Star from "./Star";
 
 interface StarRatingsProps {
   score: number | null;
-  isBgDark?: boolean;
+  isBgDark: boolean;
 }
 
 const roundToNearestHalf = (num: number): number => Math.round(num * 2) / 2;
