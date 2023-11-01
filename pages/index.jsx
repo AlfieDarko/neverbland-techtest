@@ -1,10 +1,7 @@
 import { NextSeo } from "next-seo";
 import React from "react";
 import MovieGrid from "../components/TVShowsGrid";
-import Modal from "../components/Modal";
 import LandingHeader from "../components/LandingHeader";
-import TVShowDetailsHeader from "../components/TVShowDetailsHeader";
-import TVShowDetailsData from "../components/TVShowDetailsData";
 import SearchBar from "../components/SearchBar";
 import { useShowContext } from "../contexts";
 
