@@ -4,7 +4,7 @@ import Spinner from "./Spinner";
 import { IShowInfo } from "../../types";
 
 interface SearchBarProps {
-  setShowData: React.Dispatch<React.SetStateAction<IShowInfo[] | null>>;
+  setShowData: React.Dispatch<React.SetStateAction<IShowInfo[] | []>>;
   isShowDataLoading: boolean;
   setIsShowDataLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }
