@@ -2,9 +2,10 @@ import React, { useState, useEffect, FC } from "react";
 import axios from "axios";
 import { useShowContext } from "../../contexts";
 import Spinner from "./Spinner";
+import { IShowInfo } from "../../types";
 
 interface SearchBarProps {
-  setShowData: React.Dispatch<React.SetStateAction<{}>>;
+  setShowData: React.Dispatch<React.SetStateAction<IShowInfo[] | null>>;
   isShowDataLoading: boolean;
   setIsShowDataLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }

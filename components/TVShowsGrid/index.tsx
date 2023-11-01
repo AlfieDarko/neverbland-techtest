@@ -65,47 +65,49 @@ const TVShowsGrid: React.FC = () => {
   };
 
   return (
-    <div className="md:relative md:top-[-170px] md:px-[100px] max-w-[1440px] mx-auto ">
-      <Modal
-        isOpen={showModal}
-        closeModal={closeModal}
-        show={getShowDataFromId(showId as number, showData as IShowInfo[])}
-      />
-      {showData && (
-        <h2 className="text-white md:text-8xl text-6xl opacity-50 not-italic font-bold leading-[35px] tracking-[0.5px] mb-10">
-          Your Shows:
-        </h2>
-      )}
-      <div
-        className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 gap-y-10"
-        role="grid"
-      >
-        {showData?.map((item: IShowInfo, index: number) => (
-          <motion.div
-            data-id={item.show.id}
-            tabIndex={0}
-            role="gridcell"
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            animate="animate"
-            key={item.show.id}
-            onFocus={(e) => handleOnFocus(e)}
-            onKeyDown={handleKeyDown}
-            onClick={() => {
-              setShowModal(true);
-              setShowId(item.show.id);
-            }}
-            onMouseOver={handleMouseOver}
-          >
-            <TVShowsGridItem
-              item={fadeInAnimationVariants}
-              title={item.show.name}
-              image={item.show.image?.medium}
-              score={item.show.rating.average}
-              id={item.show.id}
-            />
-          </motion.div>
-        ))}
+    <div className="px-[15px] bg-[#171b22] mx-auto">
+      <div className="md:relative md:top-[-170px] md:px-[100px] max-w-[1440px] mx-auto ">
+        <Modal
+          isOpen={showModal}
+          closeModal={closeModal}
+          show={getShowDataFromId(showId as number, showData as IShowInfo[])}
+        />
+        {showData && (
+          <h2 className="text-white md:text-8xl text-6xl opacity-50 not-italic font-bold leading-[35px] tracking-[0.5px] mb-10">
+            Your Shows:
+          </h2>
+        )}
+        <div
+          className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 gap-y-10"
+          role="grid"
+        >
+          {showData?.map((item: IShowInfo, index: number) => (
+            <motion.div
+              data-id={item.show.id}
+              tabIndex={0}
+              role="gridcell"
+              variants={fadeInAnimationVariants}
+              initial="initial"
+              animate="animate"
+              key={item.show.id}
+              onFocus={(e) => handleOnFocus(e)}
+              onKeyDown={handleKeyDown}
+              onClick={() => {
+                setShowModal(true);
+                setShowId(item.show.id);
+              }}
+              onMouseOver={handleMouseOver}
+            >
+              <TVShowsGridItem
+                item={fadeInAnimationVariants}
+                title={item.show.name}
+                image={item.show.image?.medium}
+                score={item.show.rating.average}
+                id={item.show.id}
+              />
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );

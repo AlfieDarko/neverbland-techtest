@@ -43,13 +43,8 @@ export default function Home() {
       </header>
 
       <main>
-        <div className="bg-[#171b22] md:h-[580px] ">
-          <LandingHeader backgrounds={showBackgrounds} />
-        </div>
-
-        <div className="px-[15px] bg-[#171b22] mx-auto">
-          <MovieGrid />
-        </div>
+        <LandingHeader backgrounds={showBackgrounds} />
+        <MovieGrid />
       </main>
     </div>
   );
