@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ReactModal from "react-modal";
 import { motion, AnimatePresence } from "framer-motion";
 import TVShowDetailsHeader from "../TVShowDetailsHeader";

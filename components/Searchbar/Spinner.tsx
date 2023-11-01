@@ -1,6 +1,6 @@
-import React from "react";
+import React, { FC } from "react";
 
-const Spinner = () => {
+const Spinner: FC = () => {
   return (
     <div role="status">
       <svg

@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { motion } from "framer-motion";
+import axios from "axios";
 import TVShowsGridItem from "../TVShowsGridItem";
 import { useShowContext } from "../../contexts";
-import { motion } from "framer-motion";
 import Modal from "../Modal";
-import axios from "axios";
 import { IShowInfo } from "../../types";
 
 const fadeInAnimationVariants = {

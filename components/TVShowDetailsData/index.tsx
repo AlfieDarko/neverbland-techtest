@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { IShowInfo } from "../../types";
 import axios from "axios";
 
@@ -6,8 +6,8 @@ interface TVShowDetailsDataProps {
   showData: IShowInfo;
 }
 
-const TVShowDetailsData: React.FC<TVShowDetailsDataProps> = ({ showData }) => {
-  const [cast, setCast] = React.useState(null);
+const TVShowDetailsData: FC<TVShowDetailsDataProps> = ({ showData }) => {
+  const [cast, setCast] = useState(null);
 
   const { show } = showData || {};
   const showId = show?.id;

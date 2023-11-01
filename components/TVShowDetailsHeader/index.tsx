@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { FC } from "react";
 import StarRatings from "../Ratings/StarRatings";
 import DOMPurify from "dompurify";
 import parse from "html-react-parser";
@@ -10,9 +10,7 @@ interface TVShowDetailsHeaderProps {
   showData: IShowInfo;
 }
 
-const TVShowDetailsHeader: React.FC<TVShowDetailsHeaderProps> = ({
-  showData,
-}) => {
+const TVShowDetailsHeader: FC<TVShowDetailsHeaderProps> = ({ showData }) => {
   const { show } = showData || {};
   const sanitizedShowSummary = show?.summary
     ? DOMPurify.sanitize(show.summary)

@@ -9,12 +9,7 @@ interface TVShowsGridItemProps {
   id: number;
 }
 
-const TVShowsGridItem: FC<TVShowsGridItemProps> = ({
-  title,
-  image,
-  score,
-  id,
-}) => {
+const TVShowsGridItem: FC<TVShowsGridItemProps> = ({ title, image, score }) => {
   return (
     <motion.div
       className="cursor-pointer"
