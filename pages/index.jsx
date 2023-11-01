@@ -2,7 +2,7 @@ import { NextSeo } from "next-seo";
 import React from "react";
 import MovieGrid from "../components/TVShowsGrid";
 import LandingHeader from "../components/LandingHeader";
-import SearchBar from "../components/SearchBar";
+import SearchBar from "../components/Searchbar";
 import { useShowContext } from "../contexts";
 
 export default function Home() {
