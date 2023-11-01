@@ -22,7 +22,7 @@ const fadeInAnimationVariants = {
 };
 
 const getShowDataFromId = (id: number, showData: IShowInfo[]) => {
-  return showData ? showData.find((item) => item.show.id === id) : [];
+  return showData.find((item) => item.show.id === id) as IShowInfo;
 };
 
 const TVShowsGrid: React.FC = () => {
