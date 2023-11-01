@@ -7,7 +7,7 @@ import { IShowInfo } from "../../types";
 
 interface ModalProps {
   isOpen: boolean;
-  show: IShowInfo | null;
+  show: IShowInfo;
   closeModal: () => void;
 }
 
