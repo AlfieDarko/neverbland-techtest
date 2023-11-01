@@ -24,7 +24,6 @@
     "npm": "^10.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-focus-lock": "^2.9.6",
     "react-icons": "^4.10.1",
     "react-modal": "^3.16.1",
     "styled-components": "^6.0.7",
