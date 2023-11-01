@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import React from "react";
 import { render, fireEvent, screen, waitFor } from "@testing-library/react";
 import axios from "axios";
