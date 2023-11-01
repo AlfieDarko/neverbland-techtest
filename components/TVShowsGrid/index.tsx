@@ -22,13 +22,13 @@ const fadeInAnimationVariants = {
 };
 
 const getShowDataFromId = (id: number, showData: IShowInfo[]) => {
-  return showData?.find((item) => item.show.id === id);
+  return showData ? showData.find((item) => item.show.id === id) : [];
 };
 
 const TVShowsGrid: React.FC = () => {
-  const [showData, , , , showBackgrounds, setShowBackground] = useShowContext();
+  const [showData, , , , , setShowBackground] = useShowContext();
   const [showModal, setShowModal] = React.useState(false);
-  const [showId, setShowId] = React.useState<null | number>(null);
+  const [showId, setShowId] = React.useState<number>();
 
   const closeModal = () => {
     setShowModal(false);
@@ -99,10 +99,9 @@ const TVShowsGrid: React.FC = () => {
               onMouseOver={handleMouseOver}
             >
               <TVShowsGridItem
-                item={fadeInAnimationVariants}
                 title={item.show.name}
                 image={item.show.image?.medium}
-                score={item.show.rating.average}
+                score={item.show.rating.average as number}
                 id={item.show.id}
               />
             </motion.div>

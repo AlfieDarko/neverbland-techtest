@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from "react";
-import { IShowInfo } from "../../types";
+import { ICastMember, IShowInfo } from "../../types";
 import axios from "axios";
 
 interface TVShowDetailsDataProps {
@@ -7,7 +7,7 @@ interface TVShowDetailsDataProps {
 }
 
 const TVShowDetailsData: FC<TVShowDetailsDataProps> = ({ showData }) => {
-  const [cast, setCast] = useState(null);
+  const [cast, setCast] = useState<ICastMember[]>([]);
 
   const { show } = showData || {};
   const showId = show?.id;
@@ -20,7 +20,7 @@ const TVShowDetailsData: FC<TVShowDetailsDataProps> = ({ showData }) => {
     getCast();
 
     return () => {
-      setCast(null);
+      setCast([]);
     };
   }, [showId]);
 
