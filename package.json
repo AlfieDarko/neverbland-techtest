@@ -7,7 +7,7 @@
     "start": "next start",
     "format": "prettier --write .",
     "lint": "next lint",
-    "test": "jest --watch"
+    "test": "jest"
   },
   "dependencies": {
     "cannot": "^2.4.3",
