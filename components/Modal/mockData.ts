@@ -1,6 +1,6 @@
 import { IShowInfo } from "../../types";
 
-export const mockShowInfo: IShowInfo = {
+export const mockShowInfo = {
   score: 8.5,
   show: {
     id: 12345,
@@ -23,6 +23,7 @@ export const mockShowInfo: IShowInfo = {
     weight: 85,
     externals: {
       thetvdb: 54321,
+      tvrage: 12345,
       imdb: "tt0123456",
     },
     image: {
