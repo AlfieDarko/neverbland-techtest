@@ -1,6 +1,5 @@
 import React, { useState, useEffect, FC } from "react";
 import axios from "axios";
-import { useShowContext } from "../../contexts";
 import Spinner from "./Spinner";
 import { IShowInfo } from "../../types";
 
@@ -50,7 +49,7 @@ const SearchBar: FC<SearchBarProps> = ({
         <img
           src="images/TECHFLIX_LOGO.png"
           alt="techflix logo"
-          className="w-1/2 md:w-full w-[100px]"
+          className="md:w-full w-[100px]"
         />
       </div>
       <div className="relative w-full">
