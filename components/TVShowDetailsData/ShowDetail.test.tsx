@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import ShowDetail from "./ShowDetail";
+import React from "react";
 
 describe("ShowDetail Component", () => {
   test("renders with label and content", () => {

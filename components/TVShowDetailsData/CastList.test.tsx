@@ -31,7 +31,7 @@ describe("CastList", () => {
   });
 
   it("displays cast members when they are provided", () => {
-    render(<CastList cast={mockCast} />);
+    render(<CastList cast={mockCast as ICastMember[]} />);
 
     expect(screen.getByText("Jane Doe")).toBeInTheDocument();
     expect(screen.getByText("John Smith")).toBeInTheDocument();

@@ -1,5 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import ShowInfo from "./ShowInfo";
+import React from "react";
+import { IShowInfo } from "../../types";
 
 describe("ShowInfo Component", () => {
   // Test data
@@ -13,16 +15,17 @@ describe("ShowInfo Component", () => {
   };
 
   const showDataWithMissingInfo = {
+    score: null,
     show: {
       network: null,
       schedule: null,
-      status: null,
-      genres: null,
+      status: "",
+      genres: "",
     },
   };
 
   test("renders with all details provided", () => {
-    render(<ShowInfo show={showData} />);
+    render(<ShowInfo show={showData as IShowInfo} />);
 
     expect(screen.getByText("Streamed on")).toBeInTheDocument();
     expect(screen.getByText("NetworkName")).toBeInTheDocument();
